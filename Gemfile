@@ -11,7 +11,10 @@ gem 'annotate', '~> 2.4.1.beta'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3'
+end
+
 gem 'rspec-rails', '2.9.0'
 
 
@@ -46,10 +49,11 @@ gem 'jquery-rails'
 
 
 group :test do
-gem 'capybara', '1.1.2'
+	gem 'capybara', '1.1.2'
+	gem 'factory_girl_rails', '1.4.0'
 end
 
 group :production do
-gem 'pg', '0.12.2'
+	gem 'pg', '0.12.2'
 end
 
